@@ -1,3 +1,69 @@
+export type ButtonVariant = 'primary' | 'secondary' | 'outline';
+
+export interface INavData {
+  id: string;
+  title: string;
+  href: string;
+}
+
+export interface ICompanyProof {
+  id: string;
+  title: string;
+  img: string;
+}
+
+export interface ISupports {
+  id: string;
+  title: string;
+  text: string;
+}
+
+export interface IProcess {
+  id: string;
+  title: string;
+  text: string;
+}
+
+export interface IAchievement {
+  id: string;
+  title: string;
+  text: string;
+}
+
+export interface ITestimonials {
+  id: string;
+  text: string;
+  name: string;
+  title: string;
+  img: string;
+}
+
+export interface IProjects {
+  id: string;
+  img: string;
+  title: string;
+}
+
+export interface IServices {
+  id: string;
+  img: string;
+  title: string;
+  text: string;
+}
+
+export interface IIndustries {
+  id: string;
+  img: string;
+  title: string;
+  text: string;
+}
+
+export interface ISocialApp {
+  id: string;
+  title: string;
+  img: string;
+  link: string;
+}
 /**
  * Type Definitions
  *
@@ -19,7 +85,6 @@
  * Button variant types
  * Gunakan ini untuk Button component
  */
-export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
 /**
  * Example: Button Props
