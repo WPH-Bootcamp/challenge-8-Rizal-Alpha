@@ -6,7 +6,6 @@ export interface INavData {
 }
 
 export interface ICompanyProof {
-  title: string;
   img: string;
 }
 

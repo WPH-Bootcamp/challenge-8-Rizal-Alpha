@@ -1,4 +1,3 @@
-import { type ICompanyProof } from '../types';
 import adobe from '../components/assets/adobe.png';
 import upwork from '../components/assets/upwork.png';
 import zoom from '../components/assets/zoom.png';
@@ -9,7 +8,7 @@ import dropbox from '../components/assets/dropbox.png';
 import paypal from '../components/assets/paypal.png';
 import netflix from '../components/assets/netflix.png';
 
-export const companyData: ICompanyProof[] = [
+export const companyData = [
   { id: 'c1', title: 'Adobe', img: adobe },
   { id: 'c2', title: 'Upwork', img: upwork },
   { id: 'c3', title: 'Zoom', img: zoom },

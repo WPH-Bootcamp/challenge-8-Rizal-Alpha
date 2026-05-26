@@ -12,11 +12,9 @@ import { Home } from './pages/home';
 
 function App() {
   return (
-    <div className='w-full min-h-screen bg-black text-white flex items-center justify-center font-quicksand '>
-      <div>
-        <Home />
-      </div>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
