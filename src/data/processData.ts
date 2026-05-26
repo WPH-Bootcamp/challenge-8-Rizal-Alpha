@@ -1,5 +1,4 @@
-import { type IProcess } from '../types';
-export const processData: IProcess[] = [
+export const processData = [
   {
     id: 'p1',
     title: 'Discovery & Consultation',
@@ -10,7 +9,11 @@ export const processData: IProcess[] = [
     title: 'Planning & Strategy',
     text: 'Build a Clear, Scalable Roadmap',
   },
-  { id: 'p3', title: 'Design & Prototyping', text: 'Craft UX That Converts' },
+  {
+    id: 'p3',
+    title: 'Design & Prototyping',
+    text: 'Craft UX That Converts',
+  },
   {
     id: 'p4',
     title: 'Development & Implementation',
