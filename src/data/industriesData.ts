@@ -1,9 +1,8 @@
-import { type IIndustries } from '../types';
 import fintech from '../components/assets/fintech.png';
 import eCommerce from '../components/assets/eCommerce.png';
 import healthcare from '../components/assets/Healthcare.png';
 
-export const industriesData: IIndustries[] = [
+export const industriesData = [
   {
     id: 'i1',
     title: 'Fintech',

@@ -64,6 +64,7 @@ export default function ProcessSection(): React.ReactNode {
       <p className='leading-[28px] mb-6 text-sm font-medium'>
         Clear steps. Smart execution. Results you can count on.
       </p>
+
       {processData.map((data, index) => (
         <ProcessItem
           key={data.id}

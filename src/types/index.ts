@@ -44,7 +44,8 @@ export interface IServices {
   text: string;
 }
 
-export interface IIndustries {
+export interface IIndustriesData {
+  id: string;
   img: string;
   title: string;
   text: string;
