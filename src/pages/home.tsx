@@ -5,6 +5,7 @@ import HeroSection from '../components/sections/HeroSection';
 import AchievementSection from '../components/sections/AchievementsSection';
 import ServiceSection from '../components/sections/ServicesSection';
 import IndustriesSection from '../components/sections/IndustriesSection';
+import ProjectsSection from '../components/sections/ProjectsSection';
 
 export function Home() {
   return (
@@ -14,9 +15,9 @@ export function Home() {
         {/* <HeroSection />
         <AchievementSection />
         <ProcessSection />
-        <ServiceSection /> */}
-        <IndustriesSection />
-        {/* <ProjectsSection /> */}
+        <ServiceSection /> 
+        <IndustriesSection />*/}
+        <ProjectsSection />
         {/* <TestimonialsSection /> */}
         {/* <SupportsSection /> */}
         {/* <ContactsSection /> */}

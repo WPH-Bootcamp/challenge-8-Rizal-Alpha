@@ -31,7 +31,7 @@ function IndustriesItem({ onClick, title, isActive }: IIndustriesProps) {
   );
 }
 
-export default function IndustriesSection() {
+export default function IndustriesSection(): React.ReactNode {
   // const [textActive, setTextActive] = useState<string | null>(null);
   // tapi cara ini hanya bisa simpan 1 nilai, jd gimana jika ada nilai lain terkait tombol itu misal ada elemen <p> atau <img/> terkait? pakai object interface
   // const [textActive, setTextActive] = useState<IIndustriesData | null>(null); ini awalnya kupakai tapi hasilnya malah saat inisiasi nda muncul text dan img, jadi ini solusinya:

@@ -1,3 +1,4 @@
+//ini yg paling mindblowing.. bisa atasi optical bias (misal tweak di bawah)
 //#Service
 import { servicesData } from '../../data/servicesData';
 import type { IServices } from '../../types';
