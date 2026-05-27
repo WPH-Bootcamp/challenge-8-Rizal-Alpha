@@ -1,5 +1,6 @@
 //#About
 
+import type React from 'react';
 import { achievementData } from '../../data/achievementsData';
 import type { IAchievement } from '../../types';
 
@@ -16,9 +17,9 @@ function AchItem({ title, text }: IAchievement) {
   );
 }
 
-export function AchievementSection() {
+export default function AchievementSection(): React.ReactNode {
   return (
-    <div className='flex flex-col items-center w-[393px] text-center'>
+    <div className='flex flex-col items-center w-[393px] text-center px-4'>
       <h2 className='leading-[38px] mb-3 text-[28px] font-bold'>
         End-to-End IT Solutions That Drive Results
       </h2>

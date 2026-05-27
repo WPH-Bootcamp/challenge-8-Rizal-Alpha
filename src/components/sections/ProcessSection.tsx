@@ -15,7 +15,7 @@ function ProcessItem({
   return (
     <>
       {/* paksa seukuran bola jgn pakai auto */}
-      <div className='grid grid-cols-[52px_1fr] justify-items-center w-[393px]'>
+      <div className='grid grid-cols-[52px_1fr] justify-items-center w-[393px] px-4'>
         <div className='flex flex-col justify-baseline items-stretch mr-3'>
           {/* bola bernomor */}
           <div
@@ -61,7 +61,7 @@ export default function ProcessSection(): React.ReactNode {
   return (
     <div className='flex flex-col items-center'>
       <h2 className='leading-[38px] mb-3 text-[28px] font-bold'>Our Process</h2>
-      <p className='leading-[28px] mb-8 text-sm font-medium'>
+      <p className='leading-[28px] mb-6 text-sm font-medium'>
         Clear steps. Smart execution. Results you can count on.
       </p>
       {processData.map((data, index) => (

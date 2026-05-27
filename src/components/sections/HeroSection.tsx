@@ -31,9 +31,9 @@ function CompanyProof(): React.ReactNode {
   );
 }
 
-export function HeroSection(): React.ReactNode {
+export default function HeroSection(): React.ReactNode {
   return (
-    <div className='w-[393px] grid-cols-1 overflow-hidden'>
+    <div className='w-[393px] grid-cols-1 overflow-hidden px-4'>
       {/* text */}
       <div>
         <h1 className='font-bold text-4xl leading-[44px] mb-2'>
