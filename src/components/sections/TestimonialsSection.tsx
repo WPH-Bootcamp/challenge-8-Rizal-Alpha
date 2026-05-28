@@ -22,6 +22,7 @@ interface ITestiProps {
   isCenter: boolean;
   isRight: boolean;
   isLeft: boolean;
+  onClick: () => void;
 }
 
 function TestiItem({
@@ -33,19 +34,23 @@ function TestiItem({
   isCenter,
   isLeft,
   isRight,
+  onClick,
 }: ITestiProps) {
   return (
     <div>
       <div
-        className={`absolute inset-x-0 mx-auto w-[361px] h-[284px] bg-box-greydark rounded-3xl border border-slate-800 flex flex-col justify-between ${isActive ? 'block' : 'hidden'} 
+        className={`absolute inset-x-0 mx-auto w-full max-w-[361px] h-[284px] bg-box-greydark rounded-3xl border border-slate-800 flex flex-col justify-between ${isActive ? 'block' : 'hidden'} 
         ${isCenter ? 'opacity-100 scale-100 z-20' : 'opacity-0 scale-95 z-0'} 
-        ${isCenter && 'md:opacity-100 md:scale-100 md:z-20 md:translate-x-0 md:blur-0 shadow-orange-500/10'} 
+        ${isCenter && 'sm:opacity-100 sm:scale-100 sm:z-20 sm:translate-x-0 sm:blur-0 shadow-orange-500/10'} 
+        ${isRight && 'sm:opacity-40 sm:scale-90 sm:z-10 sm:blur-[1px] sm:translate-x-[340px]'} 
+        ${isLeft && 'sm:opacity-40 sm:scale-90 sm:z-10  sm:blur-[1px] sm:-translate-x-[340px]'} 
+        ${isCenter && 'sm:opacity-100 sm:scale-100 sm:z-20 sm:translate-x-0 sm:blur-0 shadow-orange-500/10'} 
+        md:w-full md:max-w-[594px] md:h-[292px] sm:block
         ${isRight && 'md:opacity-40 md:scale-90 md:z-10 md:blur-[1px] md:translate-x-[340px] '} 
         ${isLeft && 'md:opacity-40 md:scale-90 md:z-10  md:blur-[1px] md:-translate-x-[340px]'} 
-        md:w-[594px] md:h-[292px] md:block
-        
-        
+        md:w-full md:max-w-[594px] md:h-[292px] md:block
         `}
+        onClick={onClick}
       >
         <div>
           <img src={tickmark} alt='tickMark' />
@@ -69,10 +74,10 @@ export default function TestimonialsSection(): React.ReactNode {
   const totalData = testiData.length; //akan berguna di dasar mesin carousel di bawah
 
   return (
-    <div className='flex flex-col items-center w-[393px] px-4 md:w-full md:overflow-hidden  '>
+    <div className='flex flex-col items-center mx-auto w-full px-4 sm:overflow-hidden md:w-full md:overflow-hidden'>
       {/* di sini kita pakai "relative" (sebagai jangkar bagi absolute di dalamnya) dan "tinggi tetap/fixed", tanpa itu maka tidak akan sesuai dgn keberadaan kartu2 didalamnya yg akan kita buat absolute (efek keluar dari flow, tidak dianggap ada) */}
       {/*container si kartu2 berada */}
-      <div className='flex justify-center relative h-[300px] md:w-full '>
+      <div className='flex relative h-[300px] w-full md:w-full '>
         {testiData.map((item, index) => {
           // dasar mesin corousel (mengapa di sini bukan diatas/diluar? karena scope)
           // hitung selisih posisi kartu sesuai item vs kartu yg aktif (activeIndex)
@@ -101,6 +106,7 @@ export default function TestimonialsSection(): React.ReactNode {
               isCenter={isCenter}
               isRight={isRight}
               isLeft={isLeft}
+              onClick={() => setActiveIndex(index)}
             />
           );
         })}
