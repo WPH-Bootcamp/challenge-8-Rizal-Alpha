@@ -12,7 +12,6 @@ interface IIndustriesProps {
   isActive: boolean;
 }
 
-// active => tulisannya warna cerah putih
 function IndustriesItem({ onClick, title, isActive }: IIndustriesProps) {
   return (
     <div className='flex gap-2 items-center mb-3'>

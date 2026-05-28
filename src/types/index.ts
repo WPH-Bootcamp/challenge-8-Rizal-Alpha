@@ -26,7 +26,8 @@ export interface IAchievement {
   text: string;
 }
 
-export interface ITestimonials {
+export interface ITestimonialsData {
+  id: string;
   text: string;
   name: string;
   title: string;
