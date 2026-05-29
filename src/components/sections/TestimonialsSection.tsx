@@ -30,41 +30,36 @@ function TestiItem({
   title,
   name,
   img,
-  isActive,
   isCenter,
   isLeft,
   isRight,
   onClick,
 }: ITestiProps) {
   return (
-    <div>
-      <div
-        className={`absolute inset-x-0 mx-auto w-full max-w-[361px] h-[284px] bg-box-greydark rounded-3xl border border-slate-800 flex flex-col justify-between ${isActive ? 'block' : 'hidden'} 
+    <div
+      className={`absolute inset-x-0 mx-auto w-full max-w-[361px] h-[284px] bg-box-greydark rounded-3xl border border-slate-800 flex flex-col justify-between items-center
         ${isCenter ? 'opacity-100 scale-100 z-20' : 'opacity-0 scale-95 z-0'} 
         ${isCenter && 'sm:opacity-100 sm:scale-100 sm:z-20 sm:translate-x-0 sm:blur-0 shadow-orange-500/10'} 
         ${isRight && 'sm:opacity-40 sm:scale-90 sm:z-10 sm:blur-[1px] sm:translate-x-[340px]'} 
         ${isLeft && 'sm:opacity-40 sm:scale-90 sm:z-10  sm:blur-[1px] sm:-translate-x-[340px]'} 
         ${isCenter && 'sm:opacity-100 sm:scale-100 sm:z-20 sm:translate-x-0 sm:blur-0 shadow-orange-500/10'} 
-        md:w-full md:max-w-[594px] md:h-[292px] sm:block
+        md:w-full md:max-w-[594px] md:h-[292px] 
         ${isRight && 'md:opacity-40 md:scale-90 md:z-10 md:blur-[1px] md:translate-x-[340px] '} 
         ${isLeft && 'md:opacity-40 md:scale-90 md:z-10  md:blur-[1px] md:-translate-x-[340px]'} 
-        md:w-full md:max-w-[594px] md:h-[292px] md:block
+        md:w-full md:max-w-[594px] md:h-[292px] 
         `}
-        onClick={onClick}
-      >
-        <div>
-          <img src={tickmark} alt='tickMark' />
-          <img src={star} alt='starRating' />
-          <p>{text}</p>
-          <p>{name}</p>
-          <p>{title}</p>
-          <img
-            src={img}
-            alt='testimonialsPhoto'
-            className='w-15 h-15 rounded-4xl object-cover'
-          />
-        </div>
-      </div>
+      onClick={onClick}
+    >
+      <img src={tickmark} alt='tickMark' className='w-16 h-16 absolute' />
+      <img src={star} alt='starRating' className='w-34 h-6' />
+      <p>{text}</p>
+      <p>{name}</p>
+      <p>{title}</p>
+      <img
+        src={img}
+        alt='testimonialsPhoto'
+        className='w-15 h-15 rounded-4xl object-cover'
+      />
     </div>
   );
 }
@@ -74,6 +69,7 @@ export default function TestimonialsSection(): React.ReactNode {
   const totalData = testiData.length; //akan berguna di dasar mesin carousel di bawah
 
   return (
+    //container untuk kartu testimonials dan tombol navigasi
     <div className='flex flex-col items-center mx-auto w-full px-4 sm:overflow-hidden md:w-full md:overflow-hidden'>
       {/* di sini kita pakai "relative" (sebagai jangkar bagi absolute di dalamnya) dan "tinggi tetap/fixed", tanpa itu maka tidak akan sesuai dgn keberadaan kartu2 didalamnya yg akan kita buat absolute (efek keluar dari flow, tidak dianggap ada) */}
       {/*container si kartu2 berada */}
