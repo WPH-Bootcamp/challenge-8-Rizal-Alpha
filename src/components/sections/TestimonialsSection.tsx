@@ -18,7 +18,6 @@ interface ITestiProps {
   title: string;
   name: string;
   img: string;
-  isActive: boolean;
   isCenter: boolean;
   isRight: boolean;
   isLeft: boolean;
@@ -106,8 +105,6 @@ export default function TestimonialsSection(): React.ReactNode {
             return (
               <TestiItem
                 key={item.id}
-                // cek apakah index kartu ini sama dengan indeks yang sedang aktif di state (activeIndex)
-                isActive={activeIndex === index}
                 img={item.img}
                 name={item.name}
                 text={item.text}

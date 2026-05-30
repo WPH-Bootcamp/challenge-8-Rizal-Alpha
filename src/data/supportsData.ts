@@ -1,6 +1,6 @@
 import { type ISupports } from '../types';
 
-export const supportsData: ISupports[] = [
+export const supportsData = [
   {
     id: 'u1',
     title: 'What services do you offer?',
