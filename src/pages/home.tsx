@@ -10,7 +10,7 @@ import TestimonialsSection from '../components/sections/TestimonialsSection';
 
 export function Home() {
   return (
-    <div className='w-full min-h-screen bg-black text-white flex items-center justify-center font-quicksand '>
+    <div className=' w-full min-h-screen bg-black text-white flex items-center justify-center font-quicksand '>
       {/* <Navbar /> */}
       <main className='space-y-20 w-full'>
         {/* <HeroSection />

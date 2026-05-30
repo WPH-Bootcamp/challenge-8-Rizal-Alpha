@@ -42,7 +42,7 @@ export default function IndustriesSection(): React.ReactNode {
       <h2 className='leading-[38px] mb-3 text-[28px] font-bold'>
         Built for Your Industry
       </h2>
-      <p className='leading-[28px] mb-6 text-sm font-medium'>
+      <p className='leading-[28px] mb-6 text-sm font-medium text-text-grey'>
         We've helped companies across industries launch smarter, faster, and
         more securely.
       </p>

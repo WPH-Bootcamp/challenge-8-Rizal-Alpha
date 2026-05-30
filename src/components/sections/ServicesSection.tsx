@@ -32,7 +32,7 @@ export default function ServiceSection(): React.ReactNode {
           {/* ini gw buat pakai tanda {} krna klo tanpa itu nda bisa pakai \n */}
           {`Smart IT Solutions That \n Grow With You`}
         </h2>
-        <p className='leading-[28px] mb-15 text-sm font-medium'>
+        <p className='leading-[28px] mb-15 text-sm font-medium text-text-grey'>
           Tailored tech to boost efficiency, security, and results.
         </p>
       </div>

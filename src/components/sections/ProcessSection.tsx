@@ -61,7 +61,7 @@ export default function ProcessSection(): React.ReactNode {
   return (
     <div className='flex flex-col items-center'>
       <h2 className='leading-[38px] mb-3 text-[28px] font-bold'>Our Process</h2>
-      <p className='leading-[28px] mb-6 text-sm font-medium'>
+      <p className='text-text-grey leading-[28px] mb-6 text-sm font-medium'>
         Clear steps. Smart execution. Results you can count on.
       </p>
 

@@ -23,7 +23,7 @@ export default function AchievementSection(): React.ReactNode {
       <h2 className='leading-[38px] mb-3 text-[28px] font-bold'>
         End-to-End IT Solutions That Drive Results
       </h2>
-      <p className='leading-[28px] mb-8 text-sm font-medium'>
+      <p className='text-text-grey leading-[28px] mb-8 text-sm font-medium'>
         From strategy to execution, we deliver solutions that grow your
         business.
       </p>
