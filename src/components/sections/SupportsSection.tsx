@@ -18,11 +18,9 @@ function SupportItem({ title, text, isOpen, onClick }: ISupportProp) {
     <div>
       <div
         onClick={onClick}
-        className='flex items-center justify-between my-7 gap-3'
+        className='flex items-center justify-between my-6 gap-3'
       >
-        <div className='leading-8 font-bold text-lg whitespace-pre-line'>
-          {title}
-        </div>
+        <div className='leading-8 font-bold text-lg'>{title}</div>
         <div className='w-6 h-6 flex'>
           {isOpen ? (
             <img src={minButton} alt='minusButton' />
@@ -58,15 +56,15 @@ export default function SupportsSection() {
     setCounter((counter) => counter + 1);}*/
   /*misal awalnya prevId bernilai null. ketika diklik kartu no.1 maka hasilnya 0 === 1 adalah salah maka tercetak si prevId = 1   */
   return (
-    <div className='w-full flex flex-col items-stretch justify-center mx-auto md:grid grid-cols-2'>
-      <h2 className='text-left leading-[38px] mb-3 text-[28px] font-bold '>
-        Need Help? Start Here.
+    <div className='w-full flex flex-col items-stretch justify-center mx-auto  md:grid md:grid-cols-12'>
+      <h2 className='text-left leading-[38px] mb-3 text-[28px] font-bold md:mb-6 md:whitespace-pre-line md:col-start-1 md:col-span-5 md:place-self-start'>
+        {`Need Help? Start \n Here.`}
       </h2>
-      <p className='text-left text-text-grey leading-[28px] mb-6 text-sm font-medium'>
-        Everything you need to know — all in one place.
+      <p className='text-left text-text-grey leading-[28px] mb-6 text-sm font-medium md:place-self-end md:whitespace-pre-line md:col-start-10 md:col-span-3'>
+        {`Everything you need to \n know — all in one place.`}
       </p>
-      <hr className='md:col-span-2' />
-      <div className='md:col-start-1'>
+      <hr className='md:col-span-2 md:mb-12 md:col-start-1 md:col-span-12' />
+      <div className='md:col-start-1 md:col-span-7'>
         {supportsData.map((item, index) => (
           // klo render lebih dari 1 elemen harus bungkus (jgn lupa key pindahkan ke) berikut:
           <React.Fragment key={item.id}>
@@ -85,15 +83,15 @@ export default function SupportsSection() {
         ))}
       </div>
       {/* buat kotak consultation */}
-      <div className='flex flex-col justify-between items-center bg-bg-orange p-5 rounded-3xl mt-6'>
-        <p className='self-baseline font-bold text-3xl leading-9 mb-2'>
+      <div className='flex flex-col justify-between items-center bg-bg-orange p-5 rounded-3xl mt-6 md:w-full md:h-full md:mt-0 md:col-start-9 md:col-span-4'>
+        <p className='self-baseline font-bold text-3xl leading-9 mb-2 md:mb-1 md:text-4xl md:leading-11'>
           Let's talk it through
         </p>
-        <p className='self-baseline font-semibold text-sm leading-7 mb-4'>
+        <p className='self-baseline font-semibold text-sm leading-7 mb-4 md:mb-6 md:text-lg md:leading-8'>
           book a free consultation with our team
         </p>
         <img src={consult} alt='consultation image' />
-        <span className='justify-self-center bg-white text-center rounded-4xl font-bold text-black text-base leading-7 w-full  py-2 inline-block mt-4'>
+        <span className='justify-self-center bg-white text-center rounded-4xl font-bold text-black text-base leading-7 w-full  py-2 inline-block mt-4 md:mt-6'>
           Free Consultation
         </span>
       </div>
