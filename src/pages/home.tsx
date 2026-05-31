@@ -11,9 +11,9 @@ import SupportsSection from '../components/sections/SupportsSection';
 
 export function Home() {
   return (
-    <div className=' w-full min-h-screen bg-black text-white flex items-center justify-center font-quicksand '>
+    <div className='w-full max-w-[1440px] px-4 min-h-screen mx-auto text-white flex flex-col items-center justify-center font-quicksand sm:w-full md:w-full'>
       {/* <Navbar /> */}
-      <main className='space-y-20 w-full'>
+      <main className='space-y-20'>
         {/* <HeroSection />
         <AchievementSection />
         <ProcessSection />

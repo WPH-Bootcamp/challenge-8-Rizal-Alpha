@@ -24,7 +24,7 @@ function ServiceItem({
   );
 }
 
-export default function ServiceSection(): React.ReactNode {
+export default function ServiceSection() {
   return (
     <div className='w-[393px] px-4'>
       <div className='text-center'>
